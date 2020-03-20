@@ -47,7 +47,7 @@ function mdl_VScontrol_ode!(
     #Obtain indices for component w/r to device
     local_ix = get_local_state_ix(device, PSY.CombinedVIwithVZ)
 
-    #Define internal states for frequency estimator
+    #Define internal states for inner control
     internal_states = @view device_states[local_ix]
     ξ_d = internal_states[1]
     ξ_q = internal_states[2]
